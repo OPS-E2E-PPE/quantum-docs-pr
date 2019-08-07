@@ -7,12 +7,31 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": true,
+      "xref_query_tags": [
+        "/qsharp"
+      ],
+      "enable_xrefmap_share": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "QSharpNamespace": "Content",
+        "QSharpType": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      },
+      "JoinTOCPlugin": [
+        {
+          "ReferenceTOC": "api/TOC.yml",
+          "ConceptualTOC": "articles/TOC.yml",
+          "ReferenceTOCUrl": "/qsharp/api/toc.json",
+          "ConceptualTOCUrl": "/quantum/toc.json"
+        }
+      ]
     },
     {
       "docset_name": "e2eppe-quantum-api-private",
@@ -21,111 +40,36 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": true,
+      "xref_query_tags": [
+        "/qsharp"
+      ],
+      "enable_xrefmap_share": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "QSharpNamespace": "Content",
+        "QSharpType": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      },
+      "JoinTOCPlugin": [
+        {
+          "ReferenceTOC": "api/TOC.yml",
+          "ConceptualTOC": "articles/TOC.yml",
+          "ReferenceTOCUrl": "/qsharp/api/toc.json",
+          "ConceptualTOCUrl": "/quantum/toc.json"
+        }
+      ]
     },
     {
       "docset_name": "e2eppe-quantum-docs",
       "build_source_folder": "articles",
       "build_output_subfolder": "e2eppe-quantum-docs",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
-      "docset_name": "e2eppe-quantum-docs-private",
-      "build_source_folder": "articles",
-      "build_output_subfolder": "e2eppe-quantum-docs-private",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
-      "docset_name": "quamtum-api",
-      "build_source_folder": "api",
-      "build_output_subfolder": "quamtum-api",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "xref_query_tags": [
-        "/qsharp"
-      ],
-      "enable_xrefmap_share": true,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "QSharpNamespace": "Content",
-        "QSharpType": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ]
-      },
-      "JoinTOCPlugin": [
-        {
-          "ReferenceTOC": "api/TOC.yml",
-          "ConceptualTOC": "articles/TOC.yml",
-          "ReferenceTOCUrl": "/qsharp/api/toc.json",
-          "ConceptualTOCUrl": "/quantum/toc.json"
-        }
-      ]
-    },
-    {
-      "docset_name": "quantum-api-private",
-      "build_source_folder": "api",
-      "build_output_subfolder": "quantum-api-private",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "xref_query_tags": [
-        "/qsharp"
-      ],
-      "enable_xrefmap_share": true,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "QSharpNamespace": "Content",
-        "QSharpType": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ]
-      },
-      "JoinTOCPlugin": [
-        {
-          "ReferenceTOC": "api/TOC.yml",
-          "ConceptualTOC": "articles/TOC.yml",
-          "ReferenceTOCUrl": "/qsharp/api/toc.json",
-          "ConceptualTOCUrl": "/quantum/toc.json"
-        }
-      ]
-    },
-    {
-      "docset_name": "quantum-docs",
-      "build_source_folder": "articles",
-      "build_output_subfolder": "quantum-docs",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -144,9 +88,9 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "quantum-docs-private",
+      "docset_name": "e2eppe-quantum-docs-private",
       "build_source_folder": "articles",
-      "build_output_subfolder": "quantum-docs-private",
+      "build_output_subfolder": "e2eppe-quantum-docs-private",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],

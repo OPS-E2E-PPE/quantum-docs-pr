@@ -29,6 +29,20 @@
       "template_folder": "_themes"
     },
     {
+      "docset_name": "e2eppe-quantum-docs",
+      "build_source_folder": "articles",
+      "build_output_subfolder": "e2eppe-quantum-docs",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "quamtum-api",
       "build_source_folder": "api",
       "build_output_subfolder": "quamtum-api",

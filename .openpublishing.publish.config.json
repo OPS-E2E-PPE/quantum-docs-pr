@@ -8,7 +8,7 @@
       "monikers": [],
       "moniker_ranges": [],
       "xref_query_tags": [
-        "/qsharp"
+        "/quantum"
       ],
       "enable_xrefmap_share": true,
       "open_to_public_contributors": false,
@@ -42,6 +42,7 @@
       "moniker_ranges": [],
       "xref_query_tags": [
         "/qsharp"
+        "/quantum"
       ],
       "enable_xrefmap_share": true,
       "open_to_public_contributors": false,
@@ -82,7 +83,8 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "Odata": "Content"
+        "Odata": "Content",
+		"ZonePivotGroups": "Toc"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
@@ -101,8 +103,9 @@
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "Odata": "Content"
+        "ManagedReference": "Content",    
+        "Odata": "Content",
+        "ZonePivotGroups": "Toc"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
@@ -112,12 +115,18 @@
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
+  "need_preview_pull_request": true,
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "articles/quantum",
+      "url": "https://github.com/microsoft/quantum",
       "branch": "master",
       "branch_mapping": {}
     }

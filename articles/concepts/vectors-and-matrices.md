@@ -1,11 +1,12 @@
 ---
-title: Vectors and matrices | Microsoft Docs
-description: Vectors and matrices
+title: Vectors and matrices in quantum computing
+description: Learn the basics of how to work with vectors and matrices.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.vectors
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~', '\begin{bmatrix}', '\end{bmatrix}', '\_']
 ---
 
 # Vectors and Matrices
@@ -106,7 +107,7 @@ For a square matrix $A$, we say a matrix $B$ is its [*inverse*](https://en.wikip
 
 For any matrix $M$, the adjoint or conjugate transpose of $M$ is a matrix $N$ such that $N_{ij} = M_{ji}^\*$. The adjoint of $M$ is usually denoted $M^\dagger$. We say a matrix $U$ is [*unitary*](https://en.wikipedia.org/wiki/Unitary_matrix) if $UU^\dagger = U^\dagger U = \boldone$ or equivalently, $U^{-1} = U^\dagger$.  Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.  This happens because 
 
-$$\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = \langle U v, U v\rangle.$$  
+$$\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = v^\dagger U^\dagger U v = \langle U v, U v\rangle.$$  
 
 A matrix $M$ is said to be [*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix) if $M=M^\dagger$.
 
@@ -191,4 +192,3 @@ A final useful notational convention surrounding tensor products is that, for an
 \\\\
   &\begin{bmatrix}	0 & 1 \\\\ 1& 0 	\end{bmatrix}^{\otimes 1}= \begin{bmatrix}	0& 1 \\\\ 1& 0 	\end{bmatrix},	\qquad\begin{bmatrix}	0 & 1 \\\\ 1& 0 	\end{bmatrix}^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\\\ 0 &0&1&0 \\\\ 0 &1&0&0\\\\ 1 &0&0&0\end{bmatrix}.
 \end{align}
-

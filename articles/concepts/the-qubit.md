@@ -1,13 +1,13 @@
 ---
-title: The qubit | Microsoft Docs
-description: The qubit
+title: The qubit in quantum computing
+description: Learn about qubits, the fundamental unit of information in quantum computing.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.qubit
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+no-loc: ['$$', "$$", '$', "$", $, $$, '\cdots', 'bmatrix', '\ddots', '\equiv', '\sum', '\begin', '\end', '\sqrt', '\otimes', '{', '}', '\text', '\phi', '\kappa', '\psi', '\alpha', '\beta', '\gamma', '\delta', '\omega', '\bra', '\ket', '\boldone', '\\\\', '\\', '=', '\frac', '\text', '\mapsto', '\dagger', '\to', '\begin{cases}', '\end{cases}', '\operatorname', '\braket', '\id', '\expect', '\defeq', '\variance', '\dd', '&', '\begin{align}', '\end{align}', '\Lambda', '\lambda', '\Omega', '\mathrm', '\left', '\right', '\qquad', '\times', '\big', '\langle', '\rangle', '\bigg', '\Big', '|', '\mathbb', '\vec', '\in', '\texttt', '\ne', '<', '>', '\leq', '\geq', '~~', '~', '\begin{bmatrix}', '\end{bmatrix}', '\_']
 ---
-
 # The Qubit
 
 Just as bits are the fundamental object of information in classical computing, [*qubits*](https://en.wikipedia.org/wiki/Qubit) (quantum bits) are the fundamental object of information in quantum computing.  To understand this correspondence, let's look at the simplest example: a single qubit.
@@ -64,7 +64,7 @@ is Adj { // Auto-generate the adjoint of the operation
 ```
 
 Although this is a trivial example (as the <xref:microsoft.quantum.intrinsic.h> operation is self-adjoint), you can see how this becomes invaluable for more complicated qubit operations.
-For more information, see [Operations and Functions](xref:microsoft.quantum.techniques.opsandfunctions).
+For more information, see [Operations and Functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 There are only four functions that map one bit to one bit on a classical computer. In contrast, there are an infinite number of unitary transformations on a single qubit on a quantum computer. Therefore, no finite set of primitive quantum operations, called [*gates*](https://en.wikipedia.org/wiki/Quantum_logic_gate), can exactly replicate the infinite set of unitary transformations allowed in quantum computing. This means, unlike classical computing, it is impossible for a quantum computer to implement every possible quantum program exactly using a finite number of gates. Thus quantum computers cannot be universal in the same sense of classical computers. As a result, when we say that a set of gates is *universal* for quantum computing we actually mean something slightly weaker than we mean with classical computing.
 For universality, we require that a quantum computer only *approximate* every unitary matrix within a finite error using a finite length gate sequence.
@@ -105,8 +105,10 @@ While the previous constitute the most popular primitive gates for describing op
 
 The simplest such primitive is the single qubit-rotation. Three single-qubit rotations are typically considered: $R_x$, $R_y$ and $R_z$. To visualize the action of the rotation $R_x(\theta)$, for example, imagine pointing your right thumb along the direction of the $x$-axis of the Bloch sphere and rotating the vector with your hand through an angle of $\theta/2$ radians. This confusing factor of $2$ arises from the fact that orthogonal vectors are $180^\circ$ apart when plotted on the Bloch sphere, yet are actually $90^\circ$ degrees apart geometrically. The corresponding unitary matrices are:
 
-$$
-R_z(\theta) = \begin{bmatrix} e^{-i\theta/2} & 0\\\\  0& e^{i\theta/2} \end{bmatrix},\qquad R_x(\theta) = H R_z(\theta) H, \qquad R_y(\theta) = SHR_z(\theta)HS^\dagger.
-$$
+\begin{align*}
+&R_z(\theta) = e^{-i\theta Z/2} = \begin{bmatrix} e^{-i\theta/2} & 0\\\\  0& e^{i\theta/2} \end{bmatrix}, \\\\
+&R_x(\theta) = e^{-i\theta X/2} = HR_z(\theta)H = \begin{bmatrix} \cos(\theta/2) & -i\sin(\theta/2)\\\\  -i\sin(\theta/2) & \cos(\theta/2) \end{bmatrix}, \\\\
+&R_y(\theta) = e^{-i\theta Y/2} = SHR_z(\theta)HS^\dagger = \begin{bmatrix} \cos(\theta/2) & -\sin(\theta/2)\\\\  \sin(\theta/2) & \cos(\theta/2) \end{bmatrix}.
+\end{align*}
 
 Just as any three rotations can be combined together to perform an arbitrary rotation in three dimensions, it can be seen from the Bloch sphere representation that any unitary matrix can be written as a sequence of three rotations as well. Specifically, for every unitary matrix $U$ there exists $\alpha,\beta,\gamma,\delta$ such that $U= e^{i\alpha} R_x(\beta)R_z(\gamma)R_x(\delta)$. Thus $R_z(\theta)$ and $H$ also form a universal gate set although it is not a discrete set because $\theta$ can take any value. For this reason, and due to applications in quantum simulation, such continuous gates are crucial for quantum computation, especially at the quantum algorithm design level. To achieve fault-tolerant hardware implementation, they will ultimately be compiled into discrete gate sequences that closely approximate these rotations.

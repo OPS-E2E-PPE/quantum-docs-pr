@@ -1,33 +1,15 @@
-- name: Welcome
-  href: index.md
-- name: Getting Started
-  topicHref: install-guide/index.md
-  href: install-guide/toc.yml
-- name: Quantum computing concepts
-  topicHref: concepts/index.md
+- name: Microsoft Quantum Documentation
+  href: index.yml
+- name: Overview
+  href: overview/toc.yml
+- name: Quickstarts
+  href: quickstarts/toc.yml
+- name: Tutorials
+  href: tutorials/toc.yml
+- name: Q# user guide
+  href: user-guide/toc.yml
+- name: Concepts 
   href: concepts/toc.yml
-- name: Quickstart - your first quantum program
-  href: quickstart.md
-- name: Managing quantum machines and drivers
-  topicHref: machines/index.md
-  href: machines/toc.yml
-- name: Quantum development techniques
-  topicHref: techniques/index.md
-  href: techniques/toc.yml
-- name: Q# libraries
-  href: libraries/toc.yml
-- name: Q# programming language
-  topicHref: language/index.md
-  href: language/toc.yml
-- name: Contributing to the Quantum Development Kit
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: Glossary
-  href: Glossary.md
-- name: For more information
-  href: for-more-info.md
-- name: Release Notes
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
-- name: License
-  href: license.md
+- name: Resources
+  href: resources/toc.yml
+

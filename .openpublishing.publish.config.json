@@ -32,41 +32,7 @@
           "ConceptualTOCUrl": "/quantum/toc.json"
         }
       ]
-    },
-    {
-      "docset_name": "e2eppe-quantum-api-private",
-      "build_source_folder": "api",
-      "build_output_subfolder": "e2eppe-quantum-api-private",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "xref_query_tags": [
-        "/qsharp"
-        "/quantum"
-      ],
-      "enable_xrefmap_share": true,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "QSharpNamespace": "Content",
-        "QSharpType": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ]
-      },
-      "JoinTOCPlugin": [
-        {
-          "ReferenceTOC": "api/TOC.yml",
-          "ConceptualTOC": "articles/TOC.yml",
-          "ReferenceTOCUrl": "/qsharp/api/toc.json",
-          "ConceptualTOCUrl": "/quantum/toc.json"
-        }
-      ]
-    },
+    },   
     {
       "docset_name": "e2eppe-quantum-docs",
       "build_source_folder": "articles",
@@ -85,27 +51,6 @@
         "ManagedReference": "Content",
         "Odata": "Content",
 		"ZonePivotGroups": "Toc"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
-      "docset_name": "e2eppe-quantum-docs-private",
-      "build_source_folder": "articles",
-      "build_output_subfolder": "e2eppe-quantum-docs-private",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "xref_query_tags": [
-        "/qsharp"
-      ],
-      "enable_xrefmap_share": true,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",    
-        "Odata": "Content",
-        "ZonePivotGroups": "Toc"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
